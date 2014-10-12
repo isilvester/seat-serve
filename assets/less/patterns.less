@@ -1,0 +1,74 @@
+//**************************************//
+// Ordered list conters			        //
+//**************************************//
+
+ol {
+    counter-reset: item;
+    .font-size(16px);
+    .padding-left(20px);
+
+    li {
+        display: block;
+        .padding-bottom(16px);
+        position: relative;
+
+        &:before {
+            content: counters(item, ".")".";
+            counter-increment: item;
+            position: absolute;
+            margin-right: 100%;
+            right: 10px; /* space between number and text */
+        }
+
+        ol {
+        	.padding-left(30px);
+        }
+    }
+}
+
+
+//**************************************//
+// BUTTONS			                    //
+//**************************************//
+
+.btn-outline {
+	background-color: transparent;
+	border-color: fade(@brand-white, 80%);
+	color: @brand-white;
+	display: inline-block;
+	.font-size(14px);
+	font-family: @font-default;
+	font-weight: 300;
+	.lh-border-radius(4px);
+	.lh-transition(0.5s);
+	.padding(5px 10px) !important;
+	
+	&:hover, 
+	&:focus {
+		background-color: fade(@brand-white, 10%);
+		border-color: @brand-white;
+		color: @brand-white;
+		text-decoration: none !important;
+	}
+}
+
+//**************************************//
+// Typography Defaults                  //
+//**************************************//
+
+h1 {
+	color: @copy-black;
+	font-family: @font-default;
+	font-size: 36px;
+	font-weight: 700;
+}
+
+//**************************************//
+// Copy Styles		                    //
+//**************************************//
+
+.leading-copy {
+	h1 {
+		&:extend(h1);
+	}
+}
