@@ -4,6 +4,7 @@
 .navbar {
 	border-radius: 0;
 }
+
 .navbar-default {
 	background-color: @brand-red;	
 	border: 0;
@@ -12,6 +13,21 @@
 
 	.navbar-nav {
 		.padding(12px 0);
+
+		.btn-outline {
+			&:extend(.btn-outline all);
+			border-color: fade(@brand-white, 80%);
+			color: @brand-white;
+
+
+
+			&:hover, 
+			&:focus {
+				background-color: fade(@brand-white, 10%);
+				border-color: @brand-white;
+				color: @brand-white;
+			}
+		}
 	}
 
 	.navbar-nav>li>a {
@@ -46,6 +62,26 @@
 		&:hover,
 		&:focus {
 			background-color: saturate(@brand-red, 20%) !important;
+		}
+	}
+}
+
+
+//**************************************//
+// Footer								//
+//**************************************//
+
+footer {
+	border-top: 1px solid #DEDCD7;
+	.margin-top(40px);
+	.padding(30px 0);
+
+	.footer-content {
+		.font-size(12px);
+		text-align: center;
+
+		a {
+			color: @copy-black;
 		}
 	}
 }

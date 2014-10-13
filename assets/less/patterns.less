@@ -2,6 +2,10 @@
 // Ordered list conters			        //
 //**************************************//
 
+ul {
+	.padding-left(15px);
+}
+
 ol {
     counter-reset: item;
     .font-size(16px);
@@ -33,21 +37,21 @@ ol {
 
 .btn-outline {
 	background-color: transparent;
-	border-color: fade(@brand-white, 80%);
-	color: @brand-white;
+	border-color: fade(@brand-red, 80%);
+	color: @brand-red;
 	display: inline-block;
 	.font-size(14px);
 	font-family: @font-default;
-	font-weight: 300;
+	font-weight: 600;
 	.lh-border-radius(4px);
 	.lh-transition(0.5s);
 	.padding(5px 10px) !important;
 	
 	&:hover, 
 	&:focus {
-		background-color: fade(@brand-white, 10%);
-		border-color: @brand-white;
-		color: @brand-white;
+		background-color: fade(@brand-red, 10%);
+		border-color: @brand-red;
+		color: @brand-red;
 		text-decoration: none !important;
 	}
 }
@@ -61,6 +65,29 @@ h1 {
 	font-family: @font-default;
 	font-size: 36px;
 	font-weight: 700;
+	margin: 0;
+	.margin-left(-2px);
+	padding:0;
+}
+
+h2 {
+	border-bottom: 3px solid @brand-red;
+	color: @copy-black;
+	font-family: @font-default;
+	font-size: 24px;
+	font-weight: 700;	
+	.margin-top(30px);
+	.margin-bottom(20px);
+	.padding-bottom(5px);
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: @screen-sm) { 
+	h1 {
+		.font-size(24px) !important;
+		.margin-bottom(5px);
+	}
+
 }
 
 //**************************************//
@@ -68,10 +95,18 @@ h1 {
 //**************************************//
 
 .leading-copy {
+	border-left: 6px solid @brand-red;
+	.margin-top(40px);
+	.margin-bottom(40px);
+	.margin-left(-17px);
+	.padding-left(10px);
+	.padding-bottom(3px);
+
+
 	h1 {
 		&:extend(h1);
 	}
-	p {
-		
+	p.lead {
+		margin: 0;
 	}
 }
