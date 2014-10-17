@@ -97,6 +97,7 @@ footer {
 		color: @brand-white;
 		position: relative;
 		display: block;
+		margin-bottom: 0;
 
 		h1 {
 			color: @brand-white;
@@ -123,13 +124,17 @@ footer {
 
 		.outline {
 			border: 1px solid darken(@brand-white,10%);
-			color: darken(@brand-white,10%);
+			color: @brand-white;
 			display: inline-block;
 			.font-size(14px);
 			font-family: @font-accent;
 			font-weight: 300;
 			.lh-border-radius(4px);
 			.padding(5px 10px);
+		}
+
+		.fa {
+			color: @brand-white;
 		}
 	}
 }

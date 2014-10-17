@@ -11,8 +11,84 @@
 		display: none;
 	}
 }
+
 //**************************************//
-// Ordered list conters			        //
+// Equal height				    //
+//**************************************//
+
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
+/* firefox fix */
+.img-responsive {
+    // width: 100%;
+}
+
+/* vertical alignment styles */
+.col-top {
+    vertical-align:top;
+}
+.col-middle {
+    vertical-align:middle;
+}
+.col-bottom {
+    vertical-align:bottom;
+}
+
+//**************************************//
+// Ordered list conters			    //
 //**************************************//
 
 ul {
@@ -120,6 +196,42 @@ h2 {
 		&:extend(h1);
 	}
 	p.lead {
+		margin: 0;
+	}
+}
+
+.section-row {
+	background-color: #F4F2ED;
+	border-bottom: 2px solid #DEDCD7;
+	.padding-top(40px);
+	
+
+	.image-col {
+
+	}
+
+
+}
+
+.section-header-block {
+	border-left: 6px solid @brand-red;
+	.margin-top(40px);
+	.margin-bottom(40px);
+	.margin-left(-17px);
+	.padding-left(10px);
+	.padding-bottom(3px);
+
+
+	h2 {
+		&:extend(h2);
+		border: 0;
+		.font-size(36px);
+		font-weight: 500;
+		margin-bottom: 0;
+
+	}
+	p.lead {
+		.font-size(20px);
 		margin: 0;
 	}
 }

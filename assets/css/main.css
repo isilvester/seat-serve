@@ -26,6 +26,71 @@
     display: none;
   }
 }
+.container-xs-height {
+  display: table;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.row-xs-height {
+  display: table-row;
+}
+.col-xs-height {
+  display: table-cell;
+  float: none;
+}
+@media (min-width: 768px) {
+  .container-sm-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row-sm-height {
+    display: table-row;
+  }
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+  }
+}
+@media (min-width: 992px) {
+  .container-md-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row-md-height {
+    display: table-row;
+  }
+  .col-md-height {
+    display: table-cell;
+    float: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container-lg-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row-lg-height {
+    display: table-row;
+  }
+  .col-lg-height {
+    display: table-cell;
+    float: none;
+  }
+}
+/* firefox fix */
+/* vertical alignment styles */
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
 ul {
   padding-left: 15px;
   padding-left: 1.5rem;
@@ -97,7 +162,8 @@ h1,
   margin-left: -0.2rem;
   padding: 0;
 }
-h2 {
+h2,
+.section-header-block h2 {
   border-bottom: 3px solid #d4212e;
   color: #000000;
   font-family: 'Lato', sans-serif;
@@ -134,6 +200,37 @@ h2 {
   padding-bottom: 0.3rem;
 }
 .leading-copy p.lead {
+  margin: 0;
+}
+.section-row {
+  background-color: #F4F2ED;
+  border-bottom: 2px solid #DEDCD7;
+  padding-top: 40px;
+  padding-top: 4rem;
+}
+.section-header-block {
+  border-left: 6px solid #d4212e;
+  margin-top: 40px;
+  margin-top: 4rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  margin-left: -17px;
+  margin-left: -1.7rem;
+  padding-left: 10px;
+  padding-left: 1rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+}
+.section-header-block h2 {
+  border: 0;
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.section-header-block p.lead {
+  font-size: 20px;
+  font-size: 2rem;
   margin: 0;
 }
 .navbar {
@@ -213,6 +310,7 @@ footer .footer-content a {
   color: #ffffff;
   position: relative;
   display: block;
+  margin-bottom: 0;
 }
 .index .jumbotron h1 {
   color: #ffffff;
@@ -239,7 +337,7 @@ footer .footer-content a {
 }
 .index .jumbotron .outline {
   border: 1px solid #e6e6e6;
-  color: #e6e6e6;
+  color: #ffffff;
   display: inline-block;
   font-size: 14px;
   font-size: 1.4rem;
@@ -252,4 +350,7 @@ footer .footer-content a {
   border-radius: 4px;
   background-clip: padding-box;
   padding: 5px 10px;
+}
+.index .jumbotron .fa {
+  color: #ffffff;
 }
