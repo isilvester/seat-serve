@@ -67,6 +67,20 @@
 	}
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: @brand-white;
+}
+
+
+.navbar-collapse {
+	background-color: darken(@brand-red,5%);
+}
+
+@media all and (min-width: @screen-sm) {
+	.navbar-collapse {
+		background-color: @brand-red;
+	}
+}
 
 //**************************************//
 // Footer					    //
@@ -85,6 +99,12 @@ footer {
 			color: @copy-black;
 		}
 	}
+}
+
+// homepage footer specifics
+.index footer {
+margin-top: 0;
+border: 0;
 }
 
 //**************************************//
